@@ -3,7 +3,7 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: root
     password: 
-    url: jdbc:mysql://localhost:3306/rentdb?createDatabaseIfNotExist=true
+    url: jdbc:mysql://localhost:3306/person?createDatabaseIfNotExist=true
 #it will taking name as what ever name mention in model class attibutes as a colunm name in data base
   jpa:
     hibernate:
