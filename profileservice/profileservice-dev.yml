@@ -10,7 +10,7 @@ eureka:
     fetch-registry: 'true'
     register-with-eureka: 'true'
 server:
-  port: 9091
+  port: 9092
 spring:
   application:
     name: CAMUNDA_PERSON_REGISTRATION
