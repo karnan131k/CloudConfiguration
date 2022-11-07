@@ -3,6 +3,12 @@ camunda:
     admin-user:
       id: admin
       password: adminpw
+eureka:
+  client:
+    service-url:
+      defaultZone: https://ssi-eureka-server.herokuapp.com/eureka
+    fetch-registry: 'true'
+    register-with-eureka: 'true'
 server:
   port: 9091
 spring:
