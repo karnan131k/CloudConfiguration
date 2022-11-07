@@ -1,12 +1,33 @@
+camunda:
+  bpm:
+    admin-user:
+      id: admin
+      password: adminpw
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+server:
+  port: 9092
 spring:
-  datasource:
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    username: root
-    password: password
-    url: jdbc:mysql://localhost:3306/person?createDatabaseIfNotExist=true
-#it will taking name as what ever name mention in model class attibutes as a colunm name in data base
+  autoconfigure:
+    exclude: org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration
+  registration:
+    datasource:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      jdbcUrl: jdbc:mysql://localhost:3306/registration_db?createDatabaseIfNotExist=true
+      password: password
+      username: root
   jpa:
-    hibernate:
-      naming:
-        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
-      ddl-auto: update
+    properties:
+      hibernate:
+        jdbc:
+          lob:
+            non_contextual_creation: true
+    show-sql: true
+  camunda:
+    datasource:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      jdbcUrl: jdbc:mysql://localhost:3306/camunda_db?createDatabaseIfNotExist=true
+      password: password
+      username: root
