@@ -7,9 +7,13 @@ eureka:
   client:
     service-url:
       defaultZone: https://ssi-eureka-server.herokuapp.com/
+    fetch-registry: 'true'
+    register-with-eureka: 'true'
 server:
   port: 9091
 spring:
+  application:
+    name: CAMUNDA_PERSON_REGISTRATION
   autoconfigure:
     exclude: org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration
   registration:
