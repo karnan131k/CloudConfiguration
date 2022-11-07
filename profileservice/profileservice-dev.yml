@@ -6,7 +6,7 @@ camunda:
 eureka:
   client:
     service-url:
-      defaultZone: http://localhost:8761/eureka
+      defaultZone: https://ssi-eureka-server.herokuapp.com/
 server:
   port: 9091
 spring:
